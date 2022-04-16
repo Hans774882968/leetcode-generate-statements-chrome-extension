@@ -1,0 +1,65 @@
+body, pre {
+  margin: 0;
+}
+
+@dark-blue: #007aff;
+
+.leetcode-generate-statements {
+  min-width: 400px;
+  max-width: 700px;
+  padding: 20px;
+  display: grid;
+  grid-gap: 20px;
+
+  .text-input {
+    color: @dark-blue;
+    min-height: 200px;
+  }
+
+  .translate-btn-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .translate-btn {
+    width: 80px;
+    border: none;
+    border-radius: 3px;
+    line-height: 20px;
+    outline: none;
+    user-select: none;
+    text-decoration: none;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    transition-property: color, box-shadow, background-color, opacity;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 1;
+    background-color: @dark-blue;
+    color: white;
+    font-size: 14px;
+    padding: 6px 12px;
+
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .translate-result-tab {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .translate-result {
+    color: @dark-blue;
+    font-weight: bold;
+    overflow: scroll;
+    max-height: 250px;
+  }
+}

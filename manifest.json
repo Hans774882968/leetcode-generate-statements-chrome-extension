@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "力扣生成调用语句",
+  "version": "1.0.0",
+  "description": "力扣生成调用语句",
+  "action": {
+    "default_icon": "images/icon.png",
+    "default_title": "力扣生成调用语句",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "unlimitedStorage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://leetcode-cn.com/problems/*",
+        "https://leetcode-cn.com/contest/*/problems/*"
+      ],
+      "js": [
+        "contentScript.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "main.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    },
+    {
+      "resources": [
+        "calculateStatements.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "homepage_url": "https://github.com/Hans774882968/"
+}
