@@ -1,19 +1,23 @@
 import { useState } from 'react'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { calculateStatements } from '../contentScript/calculateStatements'
 
 const App = () => {
   const [text, setText] = useState('')
   const [result, setResult] = useState('')
   const [curLang, setCurLang] = useState('cpp')
+  const [copied, setCopied] = useState(false)
 
   function getStatements (text: string) {
     if (!text) {
       setResult('输入不能为空！')
+      setCopied(false)
       return
     }
     const { legal, reason, statements } = calculateStatements(text, curLang)
     const curResult = legal ? statements.join('\n') : reason
     setResult(curResult)
+    setCopied(false)
   }
 
   const langs = [
@@ -29,6 +33,15 @@ const App = () => {
 
   return (
     <div className="leetcode-generate-statements">
+      <strong>力扣网站上，根据输入自动生成调用语句的chrome插件</strong>
+      <strong>
+        注意：
+        <ol>
+          <li>Java、C、PHP等语言的翻译结果仅供参考。</li>
+          <li>目前每次只能输入一组测试数据。</li>
+        </ol>
+      </strong>
+
       <strong>输入测试数据</strong>
       <textarea
         className="text-input"
@@ -52,7 +65,12 @@ const App = () => {
 
       <div className="translate-result-tab">
         <strong>翻译结果</strong>
-        <button>复制</button>
+        {copied ? <strong className="copy-message">复制成功！</strong> : null}
+        <CopyToClipboard
+          text={result}
+          onCopy={() => setCopied(true)}>
+          <button>复制</button>
+        </CopyToClipboard>
       </div>
       <pre className="translate-result">
         {result}

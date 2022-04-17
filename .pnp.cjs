@@ -36,6 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/chrome", "npm:0.0.181"],\
             ["@types/node", "npm:17.0.24"],\
             ["@types/react", "npm:18.0.5"],\
+            ["@types/react-copy-to-clipboard", "npm:5.0.2"],\
             ["@types/react-dom", "npm:18.0.1"],\
             ["@typescript-eslint/eslint-plugin", "virtual:0fddd358a98deb5f57a72065c8c44633150a7927c034cb5289cc1dd3ebf3d9c096c1c3a9f086a24b01a747d97c2692756e33d6481fb70db90bb2a808b8073182#npm:5.19.0"],\
             ["@typescript-eslint/parser", "virtual:0fddd358a98deb5f57a72065c8c44633150a7927c034cb5289cc1dd3ebf3d9c096c1c3a9f086a24b01a747d97c2692756e33d6481fb70db90bb2a808b8073182#npm:5.19.0"],\
@@ -45,6 +46,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-import", "virtual:0fddd358a98deb5f57a72065c8c44633150a7927c034cb5289cc1dd3ebf3d9c096c1c3a9f086a24b01a747d97c2692756e33d6481fb70db90bb2a808b8073182#npm:2.25.2"],\
             ["less", "npm:4.1.2"],\
             ["react", "npm:18.0.0"],\
+            ["react-copy-to-clipboard", "virtual:0fddd358a98deb5f57a72065c8c44633150a7927c034cb5289cc1dd3ebf3d9c096c1c3a9f086a24b01a747d97c2692756e33d6481fb70db90bb2a808b8073182#npm:5.1.0"],\
             ["react-dom", "virtual:0fddd358a98deb5f57a72065c8c44633150a7927c034cb5289cc1dd3ebf3d9c096c1c3a9f086a24b01a747d97c2692756e33d6481fb70db90bb2a808b8073182#npm:18.0.0"],\
             ["react-router-dom", "virtual:0fddd358a98deb5f57a72065c8c44633150a7927c034cb5289cc1dd3ebf3d9c096c1c3a9f086a24b01a747d97c2692756e33d6481fb70db90bb2a808b8073182#npm:6.3.0"],\
             ["rollup-plugin-copy", "npm:3.4.0"],\
@@ -732,6 +734,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/react-copy-to-clipboard", [\
+        ["npm:5.0.2", {\
+          "packageLocation": "./.yarn/cache/@types-react-copy-to-clipboard-npm-5.0.2-94b5fdec0d-f2ba19587a.zip/node_modules/@types/react-copy-to-clipboard/",\
+          "packageDependencies": [\
+            ["@types/react-copy-to-clipboard", "npm:5.0.2"],\
+            ["@types/react", "npm:18.0.5"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/react-dom", [\
         ["npm:18.0.1", {\
           "packageLocation": "./.yarn/cache/@types-react-dom-npm-18.0.1-3444453ba7-6c183e2e50.zip/node_modules/@types/react-dom/",\
@@ -1386,6 +1398,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["copy-anything", "npm:2.0.6"],\
             ["is-what", "npm:3.14.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["copy-to-clipboard", [\
+        ["npm:3.3.1", {\
+          "packageLocation": "./.yarn/cache/copy-to-clipboard-npm-3.3.1-18029bce99-3c7b1c333d.zip/node_modules/copy-to-clipboard/",\
+          "packageDependencies": [\
+            ["copy-to-clipboard", "npm:3.3.1"],\
+            ["toggle-selection", "npm:1.0.6"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2980,6 +3002,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/chrome", "npm:0.0.181"],\
             ["@types/node", "npm:17.0.24"],\
             ["@types/react", "npm:18.0.5"],\
+            ["@types/react-copy-to-clipboard", "npm:5.0.2"],\
             ["@types/react-dom", "npm:18.0.1"],\
             ["@typescript-eslint/eslint-plugin", "virtual:0fddd358a98deb5f57a72065c8c44633150a7927c034cb5289cc1dd3ebf3d9c096c1c3a9f086a24b01a747d97c2692756e33d6481fb70db90bb2a808b8073182#npm:5.19.0"],\
             ["@typescript-eslint/parser", "virtual:0fddd358a98deb5f57a72065c8c44633150a7927c034cb5289cc1dd3ebf3d9c096c1c3a9f086a24b01a747d97c2692756e33d6481fb70db90bb2a808b8073182#npm:5.19.0"],\
@@ -2989,6 +3012,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-import", "virtual:0fddd358a98deb5f57a72065c8c44633150a7927c034cb5289cc1dd3ebf3d9c096c1c3a9f086a24b01a747d97c2692756e33d6481fb70db90bb2a808b8073182#npm:2.25.2"],\
             ["less", "npm:4.1.2"],\
             ["react", "npm:18.0.0"],\
+            ["react-copy-to-clipboard", "virtual:0fddd358a98deb5f57a72065c8c44633150a7927c034cb5289cc1dd3ebf3d9c096c1c3a9f086a24b01a747d97c2692756e33d6481fb70db90bb2a808b8073182#npm:5.1.0"],\
             ["react-dom", "virtual:0fddd358a98deb5f57a72065c8c44633150a7927c034cb5289cc1dd3ebf3d9c096c1c3a9f086a24b01a747d97c2692756e33d6481fb70db90bb2a808b8073182#npm:18.0.0"],\
             ["react-router-dom", "virtual:0fddd358a98deb5f57a72065c8c44633150a7927c034cb5289cc1dd3ebf3d9c096c1c3a9f086a24b01a747d97c2692756e33d6481fb70db90bb2a808b8073182#npm:6.3.0"],\
             ["rollup-plugin-copy", "npm:3.4.0"],\
@@ -3355,6 +3379,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["object-assign", [\
+        ["npm:4.1.1", {\
+          "packageLocation": "./.yarn/cache/object-assign-npm-4.1.1-1004ad6dec-fcc6e4ea8c.zip/node_modules/object-assign/",\
+          "packageDependencies": [\
+            ["object-assign", "npm:4.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["object-inspect", [\
         ["npm:1.12.0", {\
           "packageLocation": "./.yarn/cache/object-inspect-npm-1.12.0-d064fa559a-2b36d4001a.zip/node_modules/object-inspect/",\
@@ -3619,6 +3652,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["prop-types", [\
+        ["npm:15.8.1", {\
+          "packageLocation": "./.yarn/cache/prop-types-npm-15.8.1-17c71ee7ee-c056d3f1c0.zip/node_modules/prop-types/",\
+          "packageDependencies": [\
+            ["prop-types", "npm:15.8.1"],\
+            ["loose-envify", "npm:1.4.0"],\
+            ["object-assign", "npm:4.1.1"],\
+            ["react-is", "npm:16.13.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["prr", [\
         ["npm:1.0.1", {\
           "packageLocation": "./.yarn/cache/prr-npm-1.0.1-608d442761-3bca2db047.zip/node_modules/prr/",\
@@ -3656,6 +3701,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["react-copy-to-clipboard", [\
+        ["npm:5.1.0", {\
+          "packageLocation": "./.yarn/cache/react-copy-to-clipboard-npm-5.1.0-de9742f2bc-f00a4551b9.zip/node_modules/react-copy-to-clipboard/",\
+          "packageDependencies": [\
+            ["react-copy-to-clipboard", "npm:5.1.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:0fddd358a98deb5f57a72065c8c44633150a7927c034cb5289cc1dd3ebf3d9c096c1c3a9f086a24b01a747d97c2692756e33d6481fb70db90bb2a808b8073182#npm:5.1.0", {\
+          "packageLocation": "./.yarn/__virtual__/react-copy-to-clipboard-virtual-e8e9c77455/0/cache/react-copy-to-clipboard-npm-5.1.0-de9742f2bc-f00a4551b9.zip/node_modules/react-copy-to-clipboard/",\
+          "packageDependencies": [\
+            ["react-copy-to-clipboard", "virtual:0fddd358a98deb5f57a72065c8c44633150a7927c034cb5289cc1dd3ebf3d9c096c1c3a9f086a24b01a747d97c2692756e33d6481fb70db90bb2a808b8073182#npm:5.1.0"],\
+            ["@types/react", "npm:18.0.5"],\
+            ["copy-to-clipboard", "npm:3.3.1"],\
+            ["prop-types", "npm:15.8.1"],\
+            ["react", "npm:18.0.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["react-dom", [\
         ["npm:18.0.0", {\
           "packageLocation": "./.yarn/cache/react-dom-npm-18.0.0-d6a12fba32-dd0ba9f2f3.zip/node_modules/react-dom/",\
@@ -3676,6 +3745,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [\
             "@types/react",\
             "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-is", [\
+        ["npm:16.13.1", {\
+          "packageLocation": "./.yarn/cache/react-is-npm-16.13.1-a9b9382b4f-f7a19ac349.zip/node_modules/react-is/",\
+          "packageDependencies": [\
+            ["react-is", "npm:16.13.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4184,6 +4262,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["to-regex-range", "npm:5.0.1"],\
             ["is-number", "npm:7.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["toggle-selection", [\
+        ["npm:1.0.6", {\
+          "packageLocation": "./.yarn/cache/toggle-selection-npm-1.0.6-c506b73005-a90dc80ed1.zip/node_modules/toggle-selection/",\
+          "packageDependencies": [\
+            ["toggle-selection", "npm:1.0.6"]\
           ],\
           "linkType": "HARD"\
         }]\
