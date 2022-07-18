@@ -1,6 +1,12 @@
 import { useState } from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
+import {
+  Button, Input, Select, message,
+} from 'antd'
 import { calculateStatements } from '../contentScript/calculateStatements'
+
+const { TextArea } = Input
+const { Option } = Select
 
 const App = () => {
   const [text, setText] = useState('')
@@ -43,24 +49,27 @@ const App = () => {
       </strong>
 
       <strong>输入测试数据</strong>
-      <textarea
-        className="text-input"
+      <TextArea
+        showCount
         value={text}
         onChange={(e) => setText(e.target.value)}
       >
-      </textarea>
+      </TextArea>
 
       <strong>选择语言</strong>
-      <select onChange={(e) => setCurLang(e.target.value)}>
-        {langs.map((lang) => <option value={lang.value}>{lang.label}</option>)}
-      </select>
+      {/* <select onChange={(e) => setCurLang(e.target.value)}> */}
+      {/*   {langs.map((lang) => <option value={lang.value}>{lang.label}</option>)} */}
+      {/* </select> */}
+      <Select defaultValue="cpp" onChange={(e: string) => setCurLang(e)}>
+        {langs.map((lang) => <Option value={lang.value}>{lang.label}</Option>)}
+      </Select>
 
       <div className="translate-btn-container">
-        <button
-          className="translate-btn"
+        <Button
+          type="primary"
           onClick={() => getStatements(text.trim())}>
           <span>翻译</span>
-        </button>
+        </Button>
       </div>
 
       <div className="translate-result-tab">
@@ -68,8 +77,11 @@ const App = () => {
         {copied ? <strong className="copy-message">复制成功！</strong> : null}
         <CopyToClipboard
           text={result}
-          onCopy={() => setCopied(true)}>
-          <button>复制</button>
+          onCopy={() => {
+            setCopied(true)
+            message.success('复制成功！')
+          }}>
+          <Button type="primary">复制</Button>
         </CopyToClipboard>
       </div>
       <pre className="translate-result">

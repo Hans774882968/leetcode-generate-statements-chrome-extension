@@ -1,6 +1,13 @@
 # leetcode-generate-statements-chrome-extension
 力扣网站上，根据输入自动生成调用语句的chrome插件。
 
+### 更新：引入antd
+
+1. 更新typescript到最新版。220718的最新版是`4.7.4`。
+2. 重新install`@types/chrome`等类型定义的库。
+
+由于我用的idea是2018的版本，用`yarn`的话无法检测到`@types/chrome`等类型定义，导致`yarn run build`失败。所以我在此同时用了npm（所以`add ant design`的commit引入了`package-lock.json`），修改好`package.json`以后直接`npm install`即可。
+
 ### 安装方式
 
 #### 自行编译
